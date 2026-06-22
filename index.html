@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR IT. VICTORVANNY DEE | Portfolio</title>
+    <style>
+        /* 1. GENERAL STYLES */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        /* 2. NAVIGATION */
+        nav {
+            background: #2c3e50;
+            color: #fff;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-around;
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #3498db;
+        }
+
+        /* 3. HERO SECTION */
+        .hero {
+            padding: 60px 20px;
+            background: white;
+            text-align: center;
+        }
+        .profile-pic {
+             
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #2c3e50;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        /* 4. BUTTONS */
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: #fff;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background: #2980b9;
+        }
+
+        /* 5. MOBILE RESPONSIVENESS */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                padding: 5px 0;
+            }
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* 6. DARK MODE CLASS (Activated by JS) */
+        .dark-mode {
+            background-color: #1a1a1a;
+            color: #f4f4f9;
+        }
+        .dark-mode .hero {
+            background-color: #262626;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="javascript:void(0)" onclick="toggleDarkMode()">Toggle Dark Mode</a>
+    </nav>
+
+    <div class="hero" id="home">
+        <img src="e:\SWASHI\Snapchat-238490301.jpg" alt="Profile Picture" class="profile-pic">
+        
+        <h1>Welcome to Swash Outfits</h1>
+        <p>PATA NGUO ZA KIKE NA KIUME KAMA CASUAL SUITS ZA KIKE NA KIUME, VIATU VYA KIKE NA KIUME </p>
+        
+        <button class="btn" onclick="showAlert()">Click for Order Now </button>
+    </div>
+
+    <hr>
+
+    <div style="padding: 40px; text-align: center;" id="about">
+        <h2>20% DISCOUNT</h2>
+        <p><marquee behavior="alternate" direction="right"><h1>SWAUMU HAMIS WAMBURA O2.4661.21.03.2025</h1></marquee></p>
+    </div>
+
+    <script>
+        // Function for the button alert
+        function showAlert() {
+            alert("Success! You've interacted with a JavaScript function.");
+        }
+
+        // Function to toggle between Light and Dark mode
+        function toggleDarkMode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+
+</body>
+</html>
